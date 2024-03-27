@@ -7,22 +7,25 @@ import pandas as pd
 from tqdm import tqdm
 
 #%%
-movies_df = pd.read_csv('/home/ee303/test/dataset/GENRES/ml-1m/movies.dat',
+movies_df = pd.read_csv('/home/ee303/test/dataset/GENRES/movies.dat',
                         delimiter='::', engine= 'python', header=None,
-                        names=['movie_name', 'genre'],encoding='latin1')
-#preprocess movie.csv file
-movies_df.reset_index(inplace=True)
-movies_df.rename(columns={"index": "itemID"}, inplace=True)
+                        names=['itemID','movie_name', 'genre'],encoding='latin1')
+df = movielens.load_pandas_df(size="1m", local_cache_path='./dataset/')
+
+# movies_df.reset_index(inplace=True)
+# movies_df.rename(columns={"index": "itemID"}, inplace=True)
+merged_df = pd.merge(movies_df, df[['itemID']], on='itemID', how='inner')
+movies_df = merged_df.drop_duplicates(subset='itemID')
+movies_df.reset_index(drop=True, inplace=True)
 
 #%%
 #applying tfidf to genres
-recommender=TfidfRecommender(id_col="itemID",tokenization_method='bert')
+recommender=TfidfRecommender(id_col="itemID",tokenization_method='none')
 clean_movies=recommender.clean_dataframe(movies_df,cols_to_clean=["genre"],new_col_name="genres").drop(columns=["genre"])
-tf, vectors_tokenized = recommender.tokenize_text(df_clean=clean_movies, text_col="genres")
+tf, vectors_tokenized = recommender.tokenize_text(df_clean=clean_movies, text_col="genres",ngram_range=(1,4))
 recommender.fit(tf, vectors_tokenized)
 
 #%%
-df = movielens.load_pandas_df(size="1m", local_cache_path='./dataset/')
 
 train, validate, test = python_chrono_split(df, ratio=[0.8,0.1,0.1], filter_by="user",col_user="userID", col_item="itemID", col_timestamp="timestamp")
 userID_list = list(train['userID'].unique())
@@ -44,21 +47,21 @@ def actual_items(user_id, actual_rating_matrix):
     movies_rated = user_ratings.dropna().index.tolist()
     return movies_rated
 
-def recall_at_k(user_id, train, k, evaluate_rating_matrix):
-    actual_items_list = actual_items(user_id, evaluate_rating_matrix)
-    recommended_items_list = recommended_items(user_id, train, k=k)
+def recall_at_k(user_id, dataset, k, actual_rating_matrix):
+    actual_items_list = actual_items(user_id, actual_rating_matrix)
+    recommended_items_list = recommended_items(user_id, dataset, k=k)
     matched_item = set(actual_items_list).intersection(set(recommended_items_list))
 
     recall = len(matched_item) / len(actual_items_list) if len(actual_items_list) > 0 else 0 
     return recall
 
-def average_recall_at_k(userID_list, train, k, evaluate_rating_matrix=r_matrix_validate):
+def average_recall_at_k(userID_list, dataset, k, evaluate_rating_matrix=r_matrix_validate):
     total_recall = 0
     num_users = len(userID_list)
     
     with tqdm(total=len(userID_list)) as pbar:
         for user_id in userID_list:
-            recall_at_k_value = recall_at_k(user_id, train, k, evaluate_rating_matrix)       
+            recall_at_k_value = recall_at_k(user_id, dataset, k, evaluate_rating_matrix)       
             total_recall += recall_at_k_value
             pbar.update(1)
         
@@ -66,7 +69,8 @@ def average_recall_at_k(userID_list, train, k, evaluate_rating_matrix=r_matrix_v
     return average_recall
 
 #%%
-recommender.recommend_top_k_items(clean_movies, 10)
-average_recall_at_k(userID_list, train, 10, r_matrix_validate)
+recommender.recommend_top_k_items(clean_movies, 20)
+average_recall_at_k(userID_list, validate, 20, r_matrix_validate)
 
 #%%
+average_recall_at_k(userID_list, test, 20, r_matrix_test)

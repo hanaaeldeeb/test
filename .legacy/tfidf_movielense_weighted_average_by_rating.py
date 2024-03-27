@@ -8,9 +8,12 @@ from tqdm import tqdm
 import torch
 
 #%%
-movies_df = pd.read_csv('/home/ee303/test/dataset/GENRES/ml-1m/movies.dat',
+movies_df = pd.read_csv('/home/ee303/test/dataset/GENRES/movies.dat',
                         delimiter='::', engine= 'python', header=None,
                         names=['movie_name', 'genre'],encoding='latin1')
+df = movielens.load_pandas_df(size="1m", local_cache_path='./dataset/')
+movie_ids_to_extract=df["itemID"].unique()
+movies_df = movies_df[movies_df['itemID'].isin(movie_ids_to_extract)]
 #preprocess movie.csv file
 movies_df.reset_index(inplace=True)
 movies_df.rename(columns={"index": "itemID"}, inplace=True)
@@ -23,7 +26,6 @@ tf, vectors_tokenized = recommender.tokenize_text(df_clean=clean_movies, text_co
 recommender.fit(tf, vectors_tokenized)
 
 #%%
-df = movielens.load_pandas_df(size="1m", local_cache_path='./dataset/')
 
 train, validate, test = python_chrono_split(df, ratio=[0.8,0.1,0.1], filter_by="user",col_user="userID", col_item="itemID", col_timestamp="timestamp")
 userID_list = list(train['userID'].unique())
@@ -124,3 +126,27 @@ recall_at_20 = recall_at_k(r_matrix_predict, r_matrix_train_tensor, k)
 print("Recall@20:", recall_at_20)
 
 #%%
+create_similarity_matrix(recommender.recommendations)
+# %%
+redicted_ratings = r_matrix_predict[6]
+_, top_indices = torch.topk(redicted_ratings, 20)
+# %%
+# Get the set of movies in the top K for the user
+top_movies_predicted = set(top_indices.numpy())
+top_movies_predicted
+# %%
+# Get the set of actual rated movies for the user in the validation set
+actual_movies_rated = set(torch.nonzero(r_matrix_validate_tensor[6]).flatten().numpy())
+actual_movies_rated
+# %%
+# Calculate the intersection of predicted and actual movies
+intersection = top_movies_predicted.intersection(actual_movies_rated)
+intersection
+# %%
+# Calculate Recall@K for this user
+recall_at_k_user = len(intersection) / len(actual_movies_rated) if len(actual_movies_rated) > 0 else 0.0
+
+recall_at_k_user
+# %%
+
+# %%
