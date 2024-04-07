@@ -1,0 +1,51 @@
+
+Epoch 1 (train)7.0s + (eval)1.7s: train loss = 0.35785 = (mf)0.35735 + (embed)0.00050, recall = 0.09517, ndcg = 0.08657, precision = 0.05560, map = 0.02714
+Epoch 2 (train)7.2s + (eval)0.8s: train loss = 0.18864 = (mf)0.18747 + (embed)0.00117, recall = 0.11006, ndcg = 0.09451, precision = 0.05877, map = 0.03079
+Epoch 3 (train)6.9s + (eval)0.8s: train loss = 0.15301 = (mf)0.15136 + (embed)0.00165, recall = 0.11956, ndcg = 0.09998, precision = 0.06083, map = 0.03351
+Epoch 4 (train)7.0s + (eval)0.8s: train loss = 0.13101 = (mf)0.12892 + (embed)0.00209, recall = 0.12576, ndcg = 0.10177, precision = 0.06075, map = 0.03447
+Epoch 5 (train)8.1s + (eval)0.8s: train loss = 0.11437 = (mf)0.11186 + (embed)0.00251, recall = 0.12958, ndcg = 0.10410, precision = 0.06116, map = 0.03612
+Epoch 6 (train)7.6s + (eval)0.8s: train loss = 0.10292 = (mf)0.10002 + (embed)0.00291, recall = 0.13155, ndcg = 0.10411, precision = 0.06091, map = 0.03599
+Epoch 7 (train)9.0s + (eval)0.9s: train loss = 0.09505 = (mf)0.09178 + (embed)0.00327, recall = 0.13305, ndcg = 0.10519, precision = 0.06075, map = 0.03685
+Epoch 8 (train)7.3s + (eval)0.8s: train loss = 0.08725 = (mf)0.08362 + (embed)0.00363, recall = 0.13457, ndcg = 0.10560, precision = 0.06091, map = 0.03683
+Epoch 9 (train)8.1s + (eval)0.8s: train loss = 0.08157 = (mf)0.07759 + (embed)0.00397, recall = 0.13629, ndcg = 0.10541, precision = 0.06096, map = 0.03648
+Epoch 10 (train)7.1s + (eval)0.8s: train loss = 0.07533 = (mf)0.07102 + (embed)0.00430, recall = 0.13704, ndcg = 0.10584, precision = 0.06056, map = 0.03677
+Epoch 11 (train)8.2s + (eval)0.8s: train loss = 0.07114 = (mf)0.06651 + (embed)0.00462, recall = 0.13971, ndcg = 0.10698, precision = 0.06100, map = 0.03715
+Epoch 12 (train)7.0s + (eval)0.8s: train loss = 0.06679 = (mf)0.06186 + (embed)0.00493, recall = 0.14172, ndcg = 0.10852, precision = 0.06186, map = 0.03815
+Epoch 13 (train)8.6s + (eval)0.8s: train loss = 0.06293 = (mf)0.05769 + (embed)0.00524, recall = 0.14179, ndcg = 0.10892, precision = 0.06203, map = 0.03839
+Epoch 14 (train)6.9s + (eval)0.8s: train loss = 0.06027 = (mf)0.05473 + (embed)0.00554, recall = 0.14128, ndcg = 0.10869, precision = 0.06157, map = 0.03831
+Epoch 15 (train)7.2s + (eval)0.8s: train loss = 0.05704 = (mf)0.05122 + (embed)0.00582, recall = 0.14015, ndcg = 0.10755, precision = 0.06056, map = 0.03791
+Epoch 16 (train)5.1s + (eval)0.9s: train loss = 0.05431 = (mf)0.04821 + (embed)0.00610, recall = 0.14281, ndcg = 0.10858, precision = 0.06108, map = 0.03798
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 145, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 220, in fit
+    users, pos_items, neg_items = self.data.train_loader(self.batch_size)
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\DataModel\ImplicitCF.py", line 216, in train_loader
+    pos_items = interact[self.col_item + "_interacted"].apply(
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\pandas\core\series.py", line 4771, in apply
+    return SeriesApply(self, func, convert_dtype, args, kwargs).apply()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\pandas\core\apply.py", line 1123, in apply
+    return self.apply_standard()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\pandas\core\apply.py", line 1174, in apply_standard
+    mapped = lib.map_infer(
+  File "pandas\_libs\lib.pyx", line 2924, in pandas._libs.lib.map_infer
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\DataModel\ImplicitCF.py", line 217, in <lambda>
+    lambda x: random.choice(list(x))
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 145, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 220, in fit
+    users, pos_items, neg_items = self.data.train_loader(self.batch_size)
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\DataModel\ImplicitCF.py", line 216, in train_loader
+    pos_items = interact[self.col_item + "_interacted"].apply(
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\pandas\core\series.py", line 4771, in apply
+    return SeriesApply(self, func, convert_dtype, args, kwargs).apply()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\pandas\core\apply.py", line 1123, in apply
+    return self.apply_standard()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\pandas\core\apply.py", line 1174, in apply_standard
+    mapped = lib.map_infer(
+  File "pandas\_libs\lib.pyx", line 2924, in pandas._libs.lib.map_infer
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\DataModel\ImplicitCF.py", line 217, in <lambda>
+    lambda x: random.choice(list(x))
+KeyboardInterrupt

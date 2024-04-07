@@ -1,0 +1,23 @@
+usage: wp_test.py [-h] [--embed_size EMBED_SIZE] [--n_layers N_LAYERS] [--epochs EPOCHS] [--learning_rate LEARNING_RATE] [--decay DECAY] [--batch_size BATCH_SIZE]
+                  [--eval_epoch EVAL_EPOCH] [--top_k TOP_K]
+                  dataset_name
+wp_test.py: error: the following arguments are required: dataset_name
+System version: 3.9.19 (main, Mar 21 2024, 17:21:27) [MSC v.1916 64 bit (AMD64)]
+Pandas version: 1.5.3
+Tensorflow version: 2.7.4
+use jupyter
+{'dataset_name': '1m', 'embed_size': 128, 'n_layers': 1, 'batch_size': 10000, 'decay': 0, 'epochs': 2, 'eval_epoch': 1, 'learning_rate': 0.005, 'top_k': 20, 'create_time': '2024-03-29_12-04-38'}
+C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\DataModel\ImplicitCF.py:73: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  df = train if test is None else train.append(test)
+Already create adjacency matrix.
+Already normalize adjacency matrix.
+Using xavier initialization.
+Epoch 1 (train)5.6s + (eval)1.3s: train loss = 0.43720 = (mf)0.43720 + (embed)0.00000, recall = 0.07652, ndcg = 0.07211, precision = 0.04877, map = 0.02053
+Epoch 2 (train)4.8s + (eval)0.9s: train loss = 0.25139 = (mf)0.25139 + (embed)0.00000, recall = 0.09363, ndcg = 0.08566, precision = 0.05539, map = 0.02643
+Took 12.631378600000005 seconds for training.
+C:\Users\ee303\hanaa\wp_test.py:117: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  train_log = train_log.append(config, ignore_index=True)
+MAP:	0.021754
+NDCG:	0.072319
+Precision@K:	0.047409
+Recall@K:	0.078380

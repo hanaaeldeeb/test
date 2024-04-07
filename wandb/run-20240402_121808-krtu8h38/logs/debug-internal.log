@@ -1,0 +1,5 @@
+2024-04-02 12:18:08,939 INFO    StreamThr :536 [internal.py:wandb_internal():86] W&B internal server running at pid: 536, started at: 2024-04-02 12:18:08.939008
+2024-04-02 12:18:08,940 DEBUG   HandlerThread:536 [handler.py:handle_request():146] handle_request: status
+2024-04-02 12:18:08,944 INFO    WriterThread:536 [datastore.py:open_for_write():87] open: c:\Users\ee303\hanaa\test\wandb\run-20240402_121808-krtu8h38\run-krtu8h38.wandb
+2024-04-02 12:18:08,944 DEBUG   SenderThread:536 [sender.py:send():379] send: header
+2024-04-02 12:18:08,979 DEBUG   SenderThread:536 [sender.py:send():379] send: run

@@ -1,0 +1,29 @@
+
+Epoch 1 (train)3.2s + (eval)1.3s: train loss = 0.67983 = (mf)0.67912 + (embed)0.00071, recall = 0.08067, ndcg = 0.06991, precision = 0.04344, map = 0.02100
+Epoch 2 (train)3.3s + (eval)0.8s: train loss = 0.51158 = (mf)0.50982 + (embed)0.00176, recall = 0.09325, ndcg = 0.08564, precision = 0.05319, map = 0.02774
+Epoch 3 (train)3.4s + (eval)0.8s: train loss = 0.27185 = (mf)0.26718 + (embed)0.00467, recall = 0.09438, ndcg = 0.08700, precision = 0.05391, map = 0.02809
+Epoch 4 (train)3.3s + (eval)0.8s: train loss = 0.21406 = (mf)0.20722 + (embed)0.00684, recall = 0.10182, ndcg = 0.09106, precision = 0.05662, map = 0.02924
+Epoch 5 (train)3.4s + (eval)0.8s: train loss = 0.17030 = (mf)0.16209 + (embed)0.00821, recall = 0.11553, ndcg = 0.09779, precision = 0.05959, map = 0.03260
+Epoch 6 (train)3.3s + (eval)0.8s: train loss = 0.14367 = (mf)0.13396 + (embed)0.00972, recall = 0.12507, ndcg = 0.10187, precision = 0.06108, map = 0.03456
+Epoch 7 (train)3.3s + (eval)0.8s: train loss = 0.12670 = (mf)0.11553 + (embed)0.01117, recall = 0.13163, ndcg = 0.10477, precision = 0.06280, map = 0.03540
+Epoch 8 (train)3.3s + (eval)0.8s: train loss = 0.11469 = (mf)0.10226 + (embed)0.01243, recall = 0.13500, ndcg = 0.10703, precision = 0.06304, map = 0.03678
+Epoch 9 (train)3.3s + (eval)0.8s: train loss = 0.10612 = (mf)0.09260 + (embed)0.01353, recall = 0.13572, ndcg = 0.10761, precision = 0.06286, map = 0.03713
+Epoch 10 (train)3.4s + (eval)0.8s: train loss = 0.09881 = (mf)0.08431 + (embed)0.01450, recall = 0.13838, ndcg = 0.10822, precision = 0.06323, map = 0.03741
+Epoch 11 (train)3.3s + (eval)0.8s: train loss = 0.09318 = (mf)0.07778 + (embed)0.01539, recall = 0.14020, ndcg = 0.10891, precision = 0.06344, map = 0.03785
+Epoch 12 (train)3.3s + (eval)0.8s: train loss = 0.08923 = (mf)0.07301 + (embed)0.01622, recall = 0.14075, ndcg = 0.10906, precision = 0.06336, map = 0.03805
+Epoch 13 (train)3.3s + (eval)0.8s: train loss = 0.08513 = (mf)0.06814 + (embed)0.01699, recall = 0.14069, ndcg = 0.10914, precision = 0.06276, map = 0.03839
+Epoch 14 (train)3.4s + (eval)0.8s: train loss = 0.08238 = (mf)0.06469 + (embed)0.01769, recall = 0.14185, ndcg = 0.10989, precision = 0.06295, map = 0.03885
+Epoch 15 (train)3.4s + (eval)0.8s: train loss = 0.07925 = (mf)0.06092 + (embed)0.01833, recall = 0.14343, ndcg = 0.11014, precision = 0.06321, map = 0.03876
+Epoch 16 (train)3.3s + (eval)0.8s: train loss = 0.07653 = (mf)0.05758 + (embed)0.01895, recall = 0.14451, ndcg = 0.11084, precision = 0.06320, map = 0.03911
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 145, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 220, in fit
+    users, pos_items, neg_items = self.data.train_loader(self.batch_size)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 145, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 220, in fit
+    users, pos_items, neg_items = self.data.train_loader(self.batch_size)
+KeyboardInterrupt

@@ -1,0 +1,47 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-03-29T04:03:53.514307",
+    "startedAt": "2024-03-29T04:03:52.211163",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\ee303\\hanaa\\wp_test.py",
+    "codePathLocal": "..\\wp_test.py",
+    "codePath": "..\\wp_test.py",
+    "host": "DESKTOP-4ON9ST2",
+    "username": "ee303",
+    "executable": "C:\\Users\\ee303\\anaconda3\\envs\\recommenders\\python.exe",
+    "cpu_count": 16,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2100.0,
+        "min": 0.0,
+        "max": 2100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2100.0,
+            "min": 0.0,
+            "max": 2100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 930.6826133728027,
+            "used": 177.63826370239258
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        }
+    ],
+    "memory": {
+        "total": 63.77809524536133
+    }
+}

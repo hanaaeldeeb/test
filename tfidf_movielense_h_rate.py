@@ -5,10 +5,11 @@ from recommenders.models.tfidf.tfidf_utils import TfidfRecommender
 from recommenders.datasets import movielens
 import pandas as pd
 from tqdm import tqdm
+import numpy as np
 
 #%%
 
-movies_df = pd.read_csv('/home/ee303/test/dataset/GENRES/movies.dat',
+movies_df = pd.read_csv('dataset/movies.dat',
                         delimiter='::', engine= 'python', header=None,
                         names=['itemID','movie_name', 'genre'],encoding='latin1')
 df = movielens.load_pandas_df(size="1m", local_cache_path='./dataset/')
@@ -21,7 +22,7 @@ movies_df.reset_index(drop=True, inplace=True)
 
 #%%
 #applying tfidf to genres
-recommender=TfidfRecommender(id_col="itemID",tokenization_method='scibert')
+recommender=TfidfRecommender(id_col="itemID",tokenization_method='bert')
 clean_movies=recommender.clean_dataframe(movies_df,cols_to_clean=["genre"],new_col_name="genres").drop(columns=["genre"])
 tf, vectors_tokenized = recommender.tokenize_text(df_clean=clean_movies, text_col="genres",ngram_range=(1,1))
 recommender.fit(tf, vectors_tokenized)
@@ -76,4 +77,36 @@ average_recall_at_k(userID_list, validate, 20, r_matrix_validate)
 
 
 #%%
-average_recall_at_k(userID_list, test, 20, r_matrix_test)
+average_recall_at_k(userID_list, train, 20, r_matrix_test)
+#%%
+#random recommender
+# def recommended_items_random(dataset, k):
+#     items_pool = list(set(dataset['itemID']))  # Get unique items from user's history
+#     sim_mov = np.random.choice(list(set(dataset['itemID'])), size=k, replace=False).tolist()  # Choose k random items
+#     return sim_mov
+
+def recall_at_k_random(user_id, dataset, k, actual_rating_matrix):
+    actual_items_list = actual_items(user_id, actual_rating_matrix)
+    recommended_items_list = np.random.choice(list(set(dataset['itemID'])), size=k, replace=False).tolist()
+    matched_item = set(actual_items_list).intersection(set(recommended_items_list))
+    recall = len(matched_item) / len(actual_items_list) if len(actual_items_list) > 0 else 0 
+    return recall
+
+def average_recall_at_k_random(userID_list, dataset, k, evaluate_rating_matrix=r_matrix_validate):
+    total_recall = 0
+    num_users = len(userID_list)
+    with tqdm(total=len(userID_list)) as pbar:
+        for user_id in userID_list:
+            recall_at_k_value = recall_at_k_random(user_id, dataset, k, evaluate_rating_matrix)       
+            total_recall += recall_at_k_value
+            pbar.update(1)
+    average_recall = total_recall / num_users if num_users > 0 else 0
+    return average_recall      
+# %%
+average_recall_at_k_random(userID_list, train, 20, r_matrix_validate)
+
+
+# %%
+average_recall_at_k_random(userID_list, train, 20, r_matrix_test)
+
+# %%

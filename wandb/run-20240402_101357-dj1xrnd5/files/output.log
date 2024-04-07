@@ -1,0 +1,53 @@
+
+Epoch 1 (train)7.1s: train loss = 0.33585 = (mf)0.32947 + (embed)0.00638
+Epoch 2 (train)6.4s: train loss = 0.17937 = (mf)0.16541 + (embed)0.01396
+Epoch 3 (train)6.4s: train loss = 0.15059 = (mf)0.13186 + (embed)0.01873
+Epoch 4 (train)6.4s: train loss = 0.13543 = (mf)0.11299 + (embed)0.02244
+Epoch 5 (train)6.4s: train loss = 0.12484 = (mf)0.09941 + (embed)0.02543
+Epoch 6 (train)6.4s: train loss = 0.11820 = (mf)0.09023 + (embed)0.02797
+Epoch 7 (train)6.4s: train loss = 0.11409 = (mf)0.08400 + (embed)0.03009
+Epoch 8 (train)6.4s: train loss = 0.10976 = (mf)0.07779 + (embed)0.03197
+Epoch 9 (train)6.4s: train loss = 0.10690 = (mf)0.07323 + (embed)0.03367
+Epoch 10 (train)6.4s: train loss = 0.10360 = (mf)0.06846 + (embed)0.03515
+Epoch 11 (train)6.4s: train loss = 0.10160 = (mf)0.06515 + (embed)0.03645
+Epoch 12 (train)6.4s: train loss = 0.09962 = (mf)0.06197 + (embed)0.03765
+Epoch 13 (train)6.4s: train loss = 0.09807 = (mf)0.05930 + (embed)0.03876
+Epoch 14 (train)6.4s: train loss = 0.09701 = (mf)0.05726 + (embed)0.03975
+Epoch 15 (train)6.4s: train loss = 0.09571 = (mf)0.05510 + (embed)0.04061
+Epoch 16 (train)6.4s: train loss = 0.09446 = (mf)0.05305 + (embed)0.04141
+Epoch 17 (train)6.4s: train loss = 0.09343 = (mf)0.05133 + (embed)0.04210
+Epoch 18 (train)6.4s: train loss = 0.09262 = (mf)0.04985 + (embed)0.04277
+Epoch 19 (train)6.4s: train loss = 0.09197 = (mf)0.04860 + (embed)0.04336
+Epoch 20 (train)6.4s: train loss = 0.09182 = (mf)0.04789 + (embed)0.04393
+Epoch 21 (train)6.4s: train loss = 0.09097 = (mf)0.04650 + (embed)0.04446
+Epoch 22 (train)6.4s: train loss = 0.09034 = (mf)0.04542 + (embed)0.04492
+Epoch 23 (train)6.4s: train loss = 0.09042 = (mf)0.04506 + (embed)0.04536
+Epoch 24 (train)6.4s: train loss = 0.08958 = (mf)0.04380 + (embed)0.04578
+Epoch 25 (train)6.4s: train loss = 0.08919 = (mf)0.04301 + (embed)0.04617
+Epoch 26 (train)6.4s: train loss = 0.08881 = (mf)0.04227 + (embed)0.04655
+Epoch 27 (train)6.4s: train loss = 0.08862 = (mf)0.04171 + (embed)0.04691
+Epoch 28 (train)6.4s: train loss = 0.08830 = (mf)0.04107 + (embed)0.04723
+Epoch 29 (train)6.4s: train loss = 0.08804 = (mf)0.04052 + (embed)0.04753
+Epoch 30 (train)6.3s: train loss = 0.08803 = (mf)0.04023 + (embed)0.04780
+Epoch 31 (train)6.4s: train loss = 0.08758 = (mf)0.03952 + (embed)0.04806
+Epoch 32 (train)6.4s: train loss = 0.08763 = (mf)0.03928 + (embed)0.04834
+Epoch 33 (train)6.4s: train loss = 0.08756 = (mf)0.03901 + (embed)0.04855
+Epoch 34 (train)6.4s: train loss = 0.08741 = (mf)0.03863 + (embed)0.04879
+Epoch 35 (train)6.4s: train loss = 0.08715 = (mf)0.03813 + (embed)0.04902
+Epoch 36 (train)6.4s: train loss = 0.08737 = (mf)0.03811 + (embed)0.04926
+Epoch 37 (train)6.4s: train loss = 0.08680 = (mf)0.03735 + (embed)0.04946
+Epoch 38 (train)6.4s: train loss = 0.08690 = (mf)0.03728 + (embed)0.04962
+Epoch 39 (train)6.4s: train loss = 0.08639 = (mf)0.03663 + (embed)0.04977
+Epoch 40 (train)6.4s: train loss = 0.08665 = (mf)0.03673 + (embed)0.04991
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 115, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 277, in fit
+    return ret
+UnboundLocalError: local variable 'ret' referenced before assignment
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 115, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 277, in fit
+    return ret
+UnboundLocalError: local variable 'ret' referenced before assignment

@@ -1,0 +1,12 @@
+
+Epoch 1 (train)7.0s: train loss = 0.33585 = (mf)0.32947 + (embed)0.00638
+Epoch 2 (train)6.4s: train loss = 0.17937 = (mf)0.16541 + (embed)0.01396
+Epoch 3 (train)6.4s: train loss = 0.15059 = (mf)0.13186 + (embed)0.01873
+Epoch 4 (train)6.4s: train loss = 0.13543 = (mf)0.11299 + (embed)0.02244
+Took 26.287116100000002 seconds for training.
+MAP:	0.025745
+NDCG:	0.080692
+Precision@K:	0.049288
+Recall@K:	0.097731
+C:\Users\ee303\hanaa\test\hyper.py:140: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  train_log = train_log.append(config, ignore_index=True)

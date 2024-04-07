@@ -1,0 +1,1 @@
+{"map": "recommenders.evaluation.python_evaluation.map_at_k", "ndcg": "recommenders.evaluation.python_evaluation.ndcg_at_k", "precision": "recommenders.evaluation.python_evaluation.precision_at_k", "recall": "recommenders.evaluation.python_evaluation.recall_at_k", "_timestamp": 1712025038.8457937, "_runtime": 30.34059476852417, "_step": 3, "_wandb": {"runtime": 30}}

@@ -1,0 +1,67 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-04-03T10:32:04.171417",
+    "startedAt": "2024-04-03T10:32:03.168469",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "1m",
+        "--embed_size",
+        "64",
+        "--n_layers",
+        "1",
+        "--batch_size",
+        "10000",
+        "--epochs",
+        "50",
+        "--learning_rate",
+        "0.01",
+        "--decay",
+        "0.0001"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\ee303\\hanaa\\test\\hyper.py",
+    "codePathLocal": "hyper.py",
+    "codePath": "hyper.py",
+    "git": {
+        "remote": "https://github.com/hanaaeldeeb/test.git",
+        "commit": "284993f0e36763498e96eee2b944cc699cf68906"
+    },
+    "email": null,
+    "root": "C:/Users/ee303/hanaa/test",
+    "host": "DESKTOP-4ON9ST2",
+    "username": "ee303",
+    "executable": "C:\\Users\\ee303\\anaconda3\\envs\\recommenders\\python.exe",
+    "cpu_count": 16,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2100.0,
+        "min": 0.0,
+        "max": 2100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2100.0,
+            "min": 0.0,
+            "max": 2100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 930.6826133728027,
+            "used": 175.02806854248047
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        }
+    ],
+    "memory": {
+        "total": 63.77809524536133
+    }
+}

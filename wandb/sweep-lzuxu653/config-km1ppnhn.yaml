@@ -1,0 +1,4 @@
+wandb_version: 1
+
+embed_size_list:
+  value: 512

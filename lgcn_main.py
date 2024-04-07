@@ -22,7 +22,6 @@ print("System version: {}".format(sys.version))
 print("Pandas version: {}".format(pd.__version__))
 print("Tensorflow version: {}".format(tf.__version__))
 
-#%%
 try:
     parser = argparse.ArgumentParser()
     parser.add_argument('dataset_name', type=str, default='100k')
@@ -32,7 +31,7 @@ try:
     parser.add_argument('--learning_rate', type=float, default=0.001)
     parser.add_argument('--decay', type=float, default=0)
     parser.add_argument('--batch_size', type=int, default=1024)
-    parser.add_argument('--eval_epoch', type=int, default=-1)
+    parser.add_argument('--eval_epoch', type=int, default=1)
     parser.add_argument('--top_k', type=int, default=5)
     args = parser.parse_args()
 
@@ -52,14 +51,14 @@ try:
 except:
     en_train_log = False
     config = {'dataset_name': '1m', 
-            'embed_size': 128, 
-            'n_layers': 1, 
-            'batch_size': 10000, 
-            'decay': 0, #0.0001, 
-            'epochs': 20, #20, 
+            'embed_size': 512, 
+            'n_layers': 3, 
+            'batch_size': 50000, 
+            'decay': 0.0001, #0.0001, 
+            'epochs': 100, #20, 
             'eval_epoch': 1, 
-            'learning_rate': 0.005, 
-            'top_k': 5,
+            'learning_rate': 0.01, 
+            'top_k': 20,
             'create_time': datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}
     print('use jupyter')
 
@@ -76,14 +75,12 @@ else:
     train_log = pd.DataFrame([config])
 train_log.to_csv('./train_log.csv', index=False)
 
-#%%
 # prepare movielens dataset
 df = movielens.load_pandas_df(size=config['dataset_name'], local_cache_path='./dataset/')
 train,validate, test = python_chrono_split(df, ratio=[0.8,0.1,0.1], filter_by="user",col_user="userID", col_item="itemID", col_timestamp="timestamp")
 data = ImplicitCF(train=train,test=validate)
 # data_test = ImplicitCF(train=train,test=test)
 
-#%%
 hparams = prepare_hparams(yaml_file,
                           embed_size=config['embed_size'],
                           n_layers=config['n_layers'],
@@ -95,15 +92,12 @@ hparams = prepare_hparams(yaml_file,
                           top_k=config['top_k'],
                          )
 
-#%%
 model = LightGCN(hparams, data)
 
-#%%
 with Timer() as train_time:
     model.fit()
 
 print("Took {} seconds for training.".format(train_time.interval))
-
 #%%
 topk_scores = model.recommend_k_items(test, top_k=config['top_k'], remove_seen=True)
 
@@ -118,7 +112,27 @@ print("MAP:\t%f" % eval_map,
       "NDCG:\t%f" % eval_ndcg,
       "Precision@K:\t%f" % eval_precision,
       "Recall@K:\t%f" % eval_recall, sep='\n')
+#%%
+#for training
+topk_scores = model.recommend_k_items(train, top_k=config['top_k'], remove_seen=False)
 
+topk_scores.head()
+#%%
+eval_map = map_at_k(train, topk_scores, k=config['top_k'])
+eval_ndcg = ndcg_at_k(train, topk_scores, k=config['top_k'])
+eval_precision = precision_at_k(train, topk_scores, k=config['top_k'])
+eval_recall = recall_at_k(train, topk_scores, k=config['top_k'])
+
+print("MAP:\t%f" % eval_map,
+      "NDCG:\t%f" % eval_ndcg,
+      "Precision@K:\t%f" % eval_precision,
+      "Recall@K:\t%f" % eval_recall, sep='\n')
+#%%
+eval_precision = precision_at_k(validate, topk_scores, k=config['top_k'])
+eval_precision
+#%%
+eval_recall = recall_at_k(validate, topk_scores, k=config['top_k'])
+eval_recall
 #%%
 if en_train_log:
     train_log = pd.read_csv('./train_log.csv')

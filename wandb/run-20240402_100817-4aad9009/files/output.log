@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 115, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 220, in fit
+    'dataset_name': args.dataset_name,
+NameError: name 'args' is not defined
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 115, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 220, in fit
+    'dataset_name': args.dataset_name,
+NameError: name 'args' is not defined

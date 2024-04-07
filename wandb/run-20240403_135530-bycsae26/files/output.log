@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 145, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 258, in fit
+    wandb.log({ "ndcg": ndcg, "precision": precision, "recall": recall})
+NameError: name 'ndcg' is not defined
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 145, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 258, in fit
+    wandb.log({ "ndcg": ndcg, "precision": precision, "recall": recall})
+NameError: name 'ndcg' is not defined

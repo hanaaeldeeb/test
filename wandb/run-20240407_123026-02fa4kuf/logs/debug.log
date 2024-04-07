@@ -1,0 +1,41 @@
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_setup.py:_flush():76] Current SDK version is 0.16.5
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_setup.py:_flush():76] Configure stats pid to 8800
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_setup.py:_flush():76] Loading settings from C:\Users\ee303\.config\wandb\settings
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_setup.py:_flush():76] Loading settings from C:\Users\ee303\hanaa\test\wandb\settings
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'hyper.py', 'program_abspath': 'C:\\Users\\ee303\\hanaa\\test\\hyper.py', 'program': 'C:\\Users\\ee303\\hanaa\\test\\hyper.py'}
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_init.py:_log_setup():527] Logging user logs to C:\Users\ee303\hanaa\test\wandb\run-20240407_123026-02fa4kuf\logs\debug.log
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_init.py:_log_setup():528] Logging internal logs to C:\Users\ee303\hanaa\test\wandb\run-20240407_123026-02fa4kuf\logs\debug-internal.log
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_init.py:init():567] calling init triggers
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_init.py:init():574] wandb.init called with sweep_config: {}
+config: {}
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_init.py:init():617] starting backend
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [wandb_init.py:init():621] setting up manager
+2024-04-07 12:30:26,596 INFO    MainThread:8800 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-04-07 12:30:26,612 INFO    MainThread:8800 [wandb_init.py:init():629] backend started and connected
+2024-04-07 12:30:26,612 INFO    MainThread:8800 [wandb_init.py:init():721] updated telemetry
+2024-04-07 12:30:26,642 INFO    MainThread:8800 [wandb_init.py:init():754] communicating run to backend with 90.0 second timeout
+2024-04-07 12:30:27,331 INFO    MainThread:8800 [wandb_run.py:_on_init():2344] communicating current version
+2024-04-07 12:30:27,625 INFO    MainThread:8800 [wandb_run.py:_on_init():2353] got version response upgrade_message: "wandb version 0.16.6 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-04-07 12:30:27,625 INFO    MainThread:8800 [wandb_init.py:init():805] starting run threads in backend
+2024-04-07 12:30:28,634 WARNING MainThread:8800 [wandb_init.py:init():1209] interrupted
+Traceback (most recent call last):
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\wandb\sdk\wandb_init.py", line 1187, in init
+    run = wi.init()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\wandb\sdk\wandb_init.py", line 818, in init
+    run_start_result = run_start_handle.wait(timeout=30)
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\wandb\sdk\lib\mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\wandb\sdk\lib\mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\wandb\sdk\lib\mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\threading.py", line 581, in wait
+    signaled = self._cond.wait(timeout)
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\threading.py", line 316, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+2024-04-07 12:30:34,126 WARNING MsgRouterThr:8800 [router.py:message_loop():77] message_loop has been closed

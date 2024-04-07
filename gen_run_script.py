@@ -3,15 +3,15 @@
 import numpy as np
 
 #%%
-# hyper parameters pools
-# dataset_name_list = ['2018-12-31_6', '2019-01-31_6', '2019-02-28_6', '2019-03-31_6', '2019-04-30_6', '2019-05-31_6', '2019-06-30_6']
-dataset_name_list = ['2018-12-31_18', '2019-01-31_18', '2019-02-28_18', '2019-03-31_18', '2019-04-30_18', '2019-05-31_18', '2019-06-30_18', '2018-12-31_6', '2019-01-31_6', '2019-02-28_6', '2019-03-31_6', '2019-04-30_6', '2019-05-31_6', '2019-06-30_6']
-embed_size_list = [1024] # [1024, 512, 256]
-n_layers_list = [1]
-batch_size_list = [5000] #[8192, 4096, 2048, 1024]
-epochs_list = [10]
-learning_rate_list = [0.00002]
-decay_list = [0] #, 0.0001]
+
+# hyper parameters poolse
+dataset_name_list = ["1m"]
+embed_size_list =  [64,512, 1024]
+n_layers_list =  [1, 2, 3,4]
+batch_size_list = [64,1024]
+epochs_list = [50]
+learning_rate_list = [0.00001]
+decay_list = [0]
 
 search_method = 'grid'
 n_trial = 1000 # number of trials for random search
@@ -34,9 +34,9 @@ if search_method == 'random':
     np.random.shuffle(hypp_list)
     hypp_list = hypp_list[:n_trial]
     total_epochs = 0
-    for i in range(len(hypp_list)):
+    for i in range(325,len(hypp_list)+325):
         script += 'echo {}/{}\n'.format(i+1, len(hypp_list))
-        script += 'python main.py {} --embed_size {} --n_layers {} --batch_size {} --epochs {} --learning_rate {} --decay {}\n'.format(hypp_list[i]['dataset_name'], hypp_list[i]['embed_size'], hypp_list[i]['n_layers'], hypp_list[i]['batch_size'], hypp_list[i]['epochs'], hypp_list[i]['learning_rate'], hypp_list[i]['decay'])
+        script += 'python hyper.py {} --embed_size {} --n_layers {} --batch_size {} --epochs {} --learning_rate {} --decay {}\n'.format(hypp_list[i]['dataset_name'], hypp_list[i]['embed_size'], hypp_list[i]['n_layers'], hypp_list[i]['batch_size'], hypp_list[i]['epochs'], hypp_list[i]['learning_rate'], hypp_list[i]['decay'])
         total_epochs += hypp_list[i]['epochs']
 
 #%%
@@ -44,8 +44,8 @@ if search_method == 'random':
 if search_method == 'grid':
     total_epochs = 0
     for i in range(len(hypp_list)):
-        script += 'echo {}/{}\n'.format(i+1, len(hypp_list))
-        script += 'python main.py {} --embed_size {} --n_layers {} --batch_size {} --epochs {} --learning_rate {} --decay {}\n'.format(hypp_list[i]['dataset_name'], hypp_list[i]['embed_size'], hypp_list[i]['n_layers'], hypp_list[i]['batch_size'], hypp_list[i]['epochs'], hypp_list[i]['learning_rate'], hypp_list[i]['decay'])
+        script += 'echo {}/{}\n'.format(i+1+324, len(hypp_list)+324)
+        script += 'python hyper.py {} --embed_size {} --n_layers {} --batch_size {} --epochs {} --learning_rate {} --decay {}\n'.format(hypp_list[i]['dataset_name'], hypp_list[i]['embed_size'], hypp_list[i]['n_layers'], hypp_list[i]['batch_size'], hypp_list[i]['epochs'], hypp_list[i]['learning_rate'], hypp_list[i]['decay'])
         total_epochs += hypp_list[i]['epochs']
         
 #%%

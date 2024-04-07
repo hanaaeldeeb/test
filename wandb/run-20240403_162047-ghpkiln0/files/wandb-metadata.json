@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.22631-SP0",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-04-03T08:20:48.524878",
+    "startedAt": "2024-04-03T08:20:47.540891",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\ee303\\hanaa\\test\\sweep_hp.py",
+    "codePathLocal": "sweep_hp.py",
+    "codePath": "sweep_hp.py",
+    "git": {
+        "remote": "https://github.com/hanaaeldeeb/test.git",
+        "commit": "284993f0e36763498e96eee2b944cc699cf68906"
+    },
+    "email": null,
+    "root": "C:/Users/ee303/hanaa/test",
+    "host": "DESKTOP-4ON9ST2",
+    "username": "ee303",
+    "executable": "c:\\Users\\ee303\\anaconda3\\envs\\recommenders\\python.exe",
+    "cpu_count": 16,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2100.0,
+        "min": 0.0,
+        "max": 2100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2100.0,
+            "min": 0.0,
+            "max": 2100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 930.6826133728027,
+            "used": 174.84955596923828
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        }
+    ],
+    "memory": {
+        "total": 63.77809524536133
+    }
+}

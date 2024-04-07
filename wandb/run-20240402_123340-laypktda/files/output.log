@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 141, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 212, in fit
+    with wandb.init(config=config):
+UnboundLocalError: local variable 'config' referenced before assignment
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 141, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 212, in fit
+    with wandb.init(config=config):
+UnboundLocalError: local variable 'config' referenced before assignment

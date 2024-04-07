@@ -1,0 +1,47 @@
+
+Epoch 1 (train)4.8s + (eval)1.8s: train loss = 0.49692 = (mf)0.49322 + (embed)0.00370, recall = 0.07594, ndcg = 0.07118, precision = 0.04885, map = 0.02004
+Epoch 2 (train)4.2s + (eval)0.8s: train loss = 0.33975 = (mf)0.33173 + (embed)0.00801, recall = 0.07593, ndcg = 0.07141, precision = 0.04876, map = 0.02010
+Epoch 3 (train)3.9s + (eval)0.8s: train loss = 0.28230 = (mf)0.27187 + (embed)0.01043, recall = 0.08489, ndcg = 0.07988, precision = 0.05312, map = 0.02344
+Epoch 4 (train)3.9s + (eval)0.8s: train loss = 0.23796 = (mf)0.22091 + (embed)0.01705, recall = 0.09519, ndcg = 0.08737, precision = 0.05616, map = 0.02735
+Epoch 5 (train)3.9s + (eval)0.8s: train loss = 0.21908 = (mf)0.19696 + (embed)0.02212, recall = 0.10007, ndcg = 0.08976, precision = 0.05743, map = 0.02846
+Epoch 6 (train)4.0s + (eval)0.8s: train loss = 0.20583 = (mf)0.18097 + (embed)0.02486, recall = 0.10521, ndcg = 0.09292, precision = 0.05904, map = 0.02962
+Epoch 7 (train)4.0s + (eval)0.8s: train loss = 0.19494 = (mf)0.16706 + (embed)0.02789, recall = 0.11002, ndcg = 0.09602, precision = 0.06040, map = 0.03085
+Epoch 8 (train)4.0s + (eval)0.9s: train loss = 0.18701 = (mf)0.15609 + (embed)0.03092, recall = 0.11279, ndcg = 0.09795, precision = 0.06066, map = 0.03209
+Epoch 9 (train)3.9s + (eval)0.9s: train loss = 0.18156 = (mf)0.14803 + (embed)0.03353, recall = 0.11583, ndcg = 0.09971, precision = 0.06152, map = 0.03277
+Epoch 10 (train)4.0s + (eval)0.9s: train loss = 0.17615 = (mf)0.14021 + (embed)0.03594, recall = 0.11918, ndcg = 0.10070, precision = 0.06196, map = 0.03313
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 145, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 221, in fit
+    _, batch_loss, batch_mf_loss, batch_emb_loss = self.sess.run(
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 970, in run
+    result = self._run(None, fetches, feed_dict, options_ptr,
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 1193, in _run
+    results = self._do_run(handle, final_targets, final_fetches,
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 1373, in _do_run
+    return self._do_call(_run_fn, feeds, fetches, targets, options,
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 1380, in _do_call
+    return fn(*args)
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 1363, in _run_fn
+    return self._call_tf_sessionrun(options, feed_dict, fetch_list,
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 1456, in _call_tf_sessionrun
+    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 145, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 221, in fit
+    _, batch_loss, batch_mf_loss, batch_emb_loss = self.sess.run(
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 970, in run
+    result = self._run(None, fetches, feed_dict, options_ptr,
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 1193, in _run
+    results = self._do_run(handle, final_targets, final_fetches,
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 1373, in _do_run
+    return self._do_call(_run_fn, feeds, fetches, targets, options,
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 1380, in _do_call
+    return fn(*args)
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 1363, in _run_fn
+    return self._call_tf_sessionrun(options, feed_dict, fetch_list,
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\tensorflow\python\client\session.py", line 1456, in _call_tf_sessionrun
+    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,
+KeyboardInterrupt

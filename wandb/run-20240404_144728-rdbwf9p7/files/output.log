@@ -1,0 +1,58 @@
+
+Epoch 1 (train)10.2s + (eval)1.8s: train loss = 0.35096 = (mf)0.27353 + (embed)0.07743, recall = 0.09739, ndcg = 0.08973, precision = 0.05712, map = 0.02843
+Epoch 2 (train)9.6s + (eval)0.8s: train loss = 0.31546 = (mf)0.21240 + (embed)0.10306, recall = 0.10043, ndcg = 0.09119, precision = 0.05768, map = 0.02886
+Epoch 3 (train)9.5s + (eval)0.9s: train loss = 0.31446 = (mf)0.20794 + (embed)0.10652, recall = 0.10090, ndcg = 0.09162, precision = 0.05820, map = 0.02875
+Epoch 4 (train)9.5s + (eval)0.8s: train loss = 0.31261 = (mf)0.20589 + (embed)0.10672, recall = 0.10198, ndcg = 0.09218, precision = 0.05831, map = 0.02924
+Epoch 5 (train)9.5s + (eval)0.8s: train loss = 0.31062 = (mf)0.20419 + (embed)0.10643, recall = 0.10242, ndcg = 0.09243, precision = 0.05849, map = 0.02940
+Epoch 6 (train)9.6s + (eval)0.9s: train loss = 0.30941 = (mf)0.20314 + (embed)0.10627, recall = 0.10108, ndcg = 0.09106, precision = 0.05783, map = 0.02863
+Epoch 7 (train)9.6s + (eval)0.9s: train loss = 0.30917 = (mf)0.20346 + (embed)0.10571, recall = 0.10243, ndcg = 0.09136, precision = 0.05805, map = 0.02867
+Epoch 8 (train)9.6s + (eval)0.9s: train loss = 0.30820 = (mf)0.20289 + (embed)0.10531, recall = 0.10054, ndcg = 0.09100, precision = 0.05758, map = 0.02870
+Epoch 9 (train)9.5s + (eval)0.8s: train loss = 0.30781 = (mf)0.20304 + (embed)0.10477, recall = 0.10132, ndcg = 0.09128, precision = 0.05806, map = 0.02868
+Epoch 10 (train)9.5s + (eval)0.8s: train loss = 0.30623 = (mf)0.20192 + (embed)0.10431, recall = 0.10118, ndcg = 0.09176, precision = 0.05845, map = 0.02907
+Epoch 11 (train)9.5s + (eval)0.8s: train loss = 0.30567 = (mf)0.20168 + (embed)0.10399, recall = 0.10121, ndcg = 0.09114, precision = 0.05811, map = 0.02852
+Epoch 12 (train)9.5s + (eval)0.9s: train loss = 0.30532 = (mf)0.20203 + (embed)0.10329, recall = 0.10182, ndcg = 0.09061, precision = 0.05873, map = 0.02800
+Epoch 13 (train)9.6s + (eval)0.9s: train loss = 0.30542 = (mf)0.20211 + (embed)0.10332, recall = 0.10509, ndcg = 0.09380, precision = 0.05983, map = 0.02957
+Epoch 14 (train)9.5s + (eval)0.9s: train loss = 0.30515 = (mf)0.20194 + (embed)0.10322, recall = 0.10233, ndcg = 0.09247, precision = 0.05849, map = 0.02909
+Epoch 15 (train)9.5s + (eval)0.8s: train loss = 0.30418 = (mf)0.20131 + (embed)0.10287, recall = 0.10197, ndcg = 0.09152, precision = 0.05843, map = 0.02862
+Epoch 16 (train)9.5s + (eval)0.8s: train loss = 0.30330 = (mf)0.20072 + (embed)0.10258, recall = 0.10116, ndcg = 0.09155, precision = 0.05834, map = 0.02887
+Epoch 17 (train)9.5s + (eval)0.8s: train loss = 0.30359 = (mf)0.20115 + (embed)0.10244, recall = 0.10443, ndcg = 0.09256, precision = 0.05920, map = 0.02906
+Epoch 18 (train)9.6s + (eval)0.8s: train loss = 0.30298 = (mf)0.20072 + (embed)0.10226, recall = 0.10196, ndcg = 0.09164, precision = 0.05879, map = 0.02854
+Epoch 19 (train)9.5s + (eval)0.8s: train loss = 0.30229 = (mf)0.20036 + (embed)0.10193, recall = 0.10125, ndcg = 0.09167, precision = 0.05845, map = 0.02890
+Epoch 20 (train)9.5s + (eval)0.8s: train loss = 0.30287 = (mf)0.20081 + (embed)0.10206, recall = 0.10222, ndcg = 0.09196, precision = 0.05832, map = 0.02896
+Epoch 21 (train)9.5s + (eval)0.8s: train loss = 0.30187 = (mf)0.19989 + (embed)0.10198, recall = 0.10166, ndcg = 0.09191, precision = 0.05857, map = 0.02880
+Epoch 22 (train)9.5s + (eval)0.8s: train loss = 0.30148 = (mf)0.19963 + (embed)0.10185, recall = 0.10192, ndcg = 0.09115, precision = 0.05802, map = 0.02850
+Epoch 23 (train)9.5s + (eval)0.8s: train loss = 0.30275 = (mf)0.20046 + (embed)0.10229, recall = 0.10288, ndcg = 0.09238, precision = 0.05902, map = 0.02908
+Epoch 24 (train)9.6s + (eval)0.9s: train loss = 0.30144 = (mf)0.19947 + (embed)0.10197, recall = 0.10277, ndcg = 0.09240, precision = 0.05819, map = 0.02940
+Epoch 25 (train)9.6s + (eval)0.9s: train loss = 0.30195 = (mf)0.19948 + (embed)0.10247, recall = 0.10340, ndcg = 0.09277, precision = 0.05941, map = 0.02932
+Epoch 26 (train)9.5s + (eval)0.8s: train loss = 0.30132 = (mf)0.19958 + (embed)0.10174, recall = 0.10230, ndcg = 0.09207, precision = 0.05855, map = 0.02894
+Epoch 27 (train)9.5s + (eval)0.8s: train loss = 0.30172 = (mf)0.20005 + (embed)0.10167, recall = 0.10225, ndcg = 0.09230, precision = 0.05903, map = 0.02892
+Epoch 28 (train)9.5s + (eval)0.8s: train loss = 0.30110 = (mf)0.19935 + (embed)0.10176, recall = 0.10190, ndcg = 0.09244, precision = 0.05878, map = 0.02941
+Epoch 29 (train)9.5s + (eval)0.8s: train loss = 0.30132 = (mf)0.19925 + (embed)0.10206, recall = 0.10247, ndcg = 0.09205, precision = 0.05911, map = 0.02881
+Epoch 30 (train)9.6s + (eval)0.9s: train loss = 0.30176 = (mf)0.19976 + (embed)0.10201, recall = 0.10209, ndcg = 0.09178, precision = 0.05864, map = 0.02882
+Epoch 31 (train)9.6s + (eval)0.8s: train loss = 0.30151 = (mf)0.19968 + (embed)0.10182, recall = 0.10277, ndcg = 0.09224, precision = 0.05880, map = 0.02894
+Epoch 32 (train)9.5s + (eval)0.8s: train loss = 0.30091 = (mf)0.19904 + (embed)0.10187, recall = 0.10255, ndcg = 0.09283, precision = 0.05880, map = 0.02958
+Epoch 33 (train)9.5s + (eval)0.9s: train loss = 0.30050 = (mf)0.19894 + (embed)0.10156, recall = 0.10171, ndcg = 0.09178, precision = 0.05843, map = 0.02905
+Epoch 34 (train)9.6s + (eval)0.8s: train loss = 0.30086 = (mf)0.19879 + (embed)0.10207, recall = 0.10390, ndcg = 0.09282, precision = 0.05891, map = 0.02932
+Epoch 35 (train)9.5s + (eval)0.8s: train loss = 0.30167 = (mf)0.19974 + (embed)0.10193, recall = 0.10209, ndcg = 0.09202, precision = 0.05822, map = 0.02926
+Epoch 36 (train)9.5s + (eval)0.9s: train loss = 0.30218 = (mf)0.20017 + (embed)0.10201, recall = 0.10334, ndcg = 0.09256, precision = 0.05938, map = 0.02901
+Epoch 37 (train)9.5s + (eval)0.8s: train loss = 0.30140 = (mf)0.19964 + (embed)0.10177, recall = 0.10208, ndcg = 0.09261, precision = 0.05883, map = 0.02925
+Epoch 38 (train)9.5s + (eval)0.8s: train loss = 0.30046 = (mf)0.19907 + (embed)0.10140, recall = 0.10348, ndcg = 0.09234, precision = 0.05863, map = 0.02914
+Epoch 39 (train)9.5s + (eval)0.9s: train loss = 0.29962 = (mf)0.19814 + (embed)0.10147, recall = 0.10199, ndcg = 0.09195, precision = 0.05842, map = 0.02911
+Epoch 40 (train)9.5s + (eval)0.8s: train loss = 0.30043 = (mf)0.19911 + (embed)0.10132, recall = 0.10155, ndcg = 0.09182, precision = 0.05846, map = 0.02883
+Epoch 41 (train)9.6s + (eval)0.8s: train loss = 0.30053 = (mf)0.19906 + (embed)0.10147, recall = 0.10354, ndcg = 0.09361, precision = 0.05925, map = 0.02982
+Epoch 42 (train)9.5s + (eval)0.8s: train loss = 0.30005 = (mf)0.19798 + (embed)0.10207, recall = 0.10181, ndcg = 0.09225, precision = 0.05887, map = 0.02911
+Epoch 43 (train)9.5s + (eval)0.9s: train loss = 0.30051 = (mf)0.19880 + (embed)0.10171, recall = 0.10292, ndcg = 0.09253, precision = 0.05858, map = 0.02931
+Epoch 44 (train)9.5s + (eval)0.9s: train loss = 0.29957 = (mf)0.19850 + (embed)0.10107, recall = 0.10171, ndcg = 0.09229, precision = 0.05858, map = 0.02918
+Epoch 45 (train)9.5s + (eval)0.8s: train loss = 0.29953 = (mf)0.19824 + (embed)0.10128, recall = 0.10226, ndcg = 0.09218, precision = 0.05879, map = 0.02915
+Epoch 46 (train)9.5s + (eval)0.8s: train loss = 0.29935 = (mf)0.19836 + (embed)0.10099, recall = 0.10117, ndcg = 0.09233, precision = 0.05873, map = 0.02929
+Epoch 47 (train)9.6s + (eval)0.9s: train loss = 0.29992 = (mf)0.19894 + (embed)0.10097, recall = 0.10335, ndcg = 0.09331, precision = 0.05895, map = 0.02980
+Epoch 48 (train)9.6s + (eval)0.8s: train loss = 0.30025 = (mf)0.19875 + (embed)0.10149, recall = 0.10242, ndcg = 0.09278, precision = 0.05859, map = 0.02945
+Epoch 49 (train)9.5s + (eval)0.8s: train loss = 0.29971 = (mf)0.19773 + (embed)0.10197, recall = 0.10254, ndcg = 0.09207, precision = 0.05882, map = 0.02881
+Epoch 50 (train)9.5s + (eval)0.9s: train loss = 0.29981 = (mf)0.19829 + (embed)0.10152, recall = 0.10281, ndcg = 0.09304, precision = 0.05900, map = 0.02950
+Took 525.5108768 seconds for training.
+MAP:	0.023728
+NDCG:	0.078270
+Precision@K:	0.051018
+Recall@K:	0.086736
+C:\Users\ee303\hanaa\test\hyper.py:170: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  train_log = train_log.append(config, ignore_index=True)

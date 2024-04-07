@@ -1,0 +1,17 @@
+
+Epoch 1 (train)7.1s: train loss = 0.33585 = (mf)0.32947 + (embed)0.00638
+Epoch 2 (train)6.4s: train loss = 0.17937 = (mf)0.16541 + (embed)0.01396
+Epoch 3 (train)6.4s: train loss = 0.15059 = (mf)0.13186 + (embed)0.01873
+Epoch 4 (train)6.4s: train loss = 0.13543 = (mf)0.11299 + (embed)0.02244
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 115, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 277, in fit
+    return ret
+UnboundLocalError: local variable 'ret' referenced before assignment
+Traceback (most recent call last):
+  File "C:\Users\ee303\hanaa\test\hyper.py", line 115, in <module>
+    model.fit()
+  File "C:\Users\ee303\anaconda3\envs\recommenders\lib\site-packages\recommenders\models\deeprec\models\graphrec\lightgcn.py", line 277, in fit
+    return ret
+UnboundLocalError: local variable 'ret' referenced before assignment
